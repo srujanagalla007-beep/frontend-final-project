@@ -1,0 +1,27 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+}
+
+/* Custom marker pulse for high severity events */
+.severity-marker {
+  border-radius: 9999px;
+  display: block;
+}
+
+.severity-marker.severe {
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
